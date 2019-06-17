@@ -10,6 +10,19 @@
       rel="stylesheet"
     />
     <title>LitElement Web Component</title>
+    <style>
+      body {
+        --theme-primary: #212121;
+        --theme-secondary: #ffffff;
+        --theme-font-family: Open Sans, sans-serif;
+      }
+
+      my-component {
+        --my-component-text-color: var(--theme-primary);
+        --my-component-background-color: var(--theme-secondary);
+        --my-component-font-family: var(--theme-font-family);
+      }
+    </style>
   </head>
   <body>
     <my-component></my-component>

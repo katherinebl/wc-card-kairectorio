@@ -8,13 +8,15 @@ class MyComponent extends LitElement {
     return css`
       :host {
         display: block;
-        font-family: "Open Sans", sans-serif;
+        color: var(--my-component-text-color);
+        background: var(--my-component-background-color);
+        font-family: var(--my-component-font-family);
       }
 
       .directory__wrapper--card {
         background-color: orange;
-        width: 210px;
-        height: 16rem;
+        width: var(--my-component-width, 210px);
+        height: var(--my-component-height, 16rem);
         border: #ff7900 solid 5px;
         background-color: #ffffff;
         margin: 1.5rem 0.7rem;
