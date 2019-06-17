@@ -1,0 +1,23 @@
+{
+  "name": "wc-card-kairectorio",
+  "version": "1.0.0",
+  "description": "My first web component with LitElement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katherinebl/wc-card-kairectorio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katherinebl/wc-card-kairectorio/issues"
+  },
+  "homepage": "https://github.com/katherinebl/wc-card-kairectorio#readme",
+  "dependencies": {
+    "fa-icons": "^0.1.3",
+    "lit-element": "^2.2.0"
+  }
+}
