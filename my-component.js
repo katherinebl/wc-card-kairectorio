@@ -4,6 +4,24 @@ import "fa-icons";
 
 // Extend the LitElement base class
 class MyComponent extends LitElement {
+  static get properties() {
+    return {
+      link: { type: String },
+      icon: { type: String },
+      title: { type: String },
+      description: { type: String }
+    };
+  }
+
+  constructor() {
+    super();
+    this.href =
+      "http://kairosnav.westeurope.cloudapp.azure.com:8081/Account/Principal.aspx";
+    this.icon = "fa-clock";
+    this.title = "Kaihoras";
+    this.description = "Registra tus horas";
+  }
+
   static get styles() {
     return css`
       :host {
@@ -62,24 +80,20 @@ class MyComponent extends LitElement {
   render() {
     return html`
       <article class="directory__wrapper--card">
-        <a
-          class="main__directory--link"
-          target="blank"
-          href="http://kairosnav.westeurope.cloudapp.azure.com:8081/Account/Principal.aspx"
-        >
+        <a class="main__directory--link" target="blank" href="${this.link}">
           <div class="card__wrapper">
             <div class="card__icon">
               <fa-icon
-                class="far fa-clock"
+                class="far ${this.icon}"
                 color="#ff7900"
                 size="88px"
               ></fa-icon>
             </div>
             <h3 class="card__title">
-              Kaihoras
+              ${this.title}
             </h3>
             <p class="card__description">
-              Registra tus horas
+              ${this.description}
             </p>
           </div>
         </a>
@@ -87,5 +101,6 @@ class MyComponent extends LitElement {
     `;
   }
 }
+
 // Register the new element with the browser.
 customElements.define("my-component", MyComponent);
